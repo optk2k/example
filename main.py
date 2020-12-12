@@ -10,7 +10,15 @@ from time import sleep
 
 
 def test_func():
-    pass
+    """ TODO delete function"""
+    identify = 0
+    for i in range(3):
+        identify += i
+    list_date = True
+    if identify is not None:
+        list_date = list(range(5))
+    res = identify in list_date
+    return res
 
 
 def split_string(string2, range2):
@@ -40,9 +48,10 @@ def color_string(regexp, text):
 
 @click.command()
 @click.argument('pattern')
-def main(pattern):
+@click.argument('file')
+def main(pattern, file):
     """occur"""
-    file = sys.argv[0]
+    file = file
     try:
         while True:
             subprocess.call("clear")
